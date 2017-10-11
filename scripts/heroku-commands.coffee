@@ -21,16 +21,10 @@ heroku = new Heroku(token: process.env.HUBOT_HEROKU_API_KEY)
 _      = require('lodash')
 mapper = require('../heroku-response-mapper')
 moment = require('moment')
-useAuth = (process.env.HUBOT_HEROKU_USE_AUTH or '').trim().toLowerCase() is 'true'
+useAuth = 'false'
 
 module.exports = (robot) ->
   auth = (msg, appName) ->
-    role = "heroku-#{appName}"
-    hasRole = robot.auth.hasRole(msg.envelope.user, role)
-    isAdmin = robot.auth.hasRole(msg.envelope.user, 'admin')
-    if useAuth and not (hasRole or isAdmin)
-      msg.reply "Access denied. You must have this role to use this command: #{role}"
-      return false
     return true
 
   respondToUser = (robotMessage, error, successMessage) ->
