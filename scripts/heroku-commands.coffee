@@ -15,13 +15,7 @@
 #   hubot heroku rollback <app> <version> - Rollback to a release
 #   hubot heroku restart <app> <dyno> - Restarts the specified app or dyno/s (e.g. worker or web.2)
 #   hubot heroku migrate <app> - Runs migrations. Remember to restart the app =)
-#   hubot heroku config <app> - Get config keys for the app. Values not given for security
-#   hubot heroku config:set <app> <KEY=value> - Set KEY to value. Case sensitive and overrides present key
-#   hubot heroku config:unset <app> <KEY> - Unsets KEY, does not throw error if key is not present
 #
-# Author:
-#   daemonsy
-
 Heroku = require('heroku-client')
 heroku = new Heroku(token: process.env.HUBOT_HEROKU_API_KEY)
 _      = require('lodash')

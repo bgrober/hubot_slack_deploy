@@ -5,7 +5,9 @@
   "author": "bgrober",
   "description": "State of the Art Machine ",
   "dependencies": {
+    "heroku-client": "^1.9.0",
     "hubot": "^2.19.0",
+    "hubot-auth": "^1.2.0",
     "hubot-diagnostics": "0.0.2",
     "hubot-google-images": "^0.2.7",
     "hubot-google-translate": "^0.2.1",
@@ -18,8 +20,6 @@
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.1",
     "hubot-slack": "^4.4.0",
-    "heroku-client": "^1.9.0",
-    "hubot-auth": "^1.2.0",
     "lodash": "^2.4.1",
     "moment": "^2.10.3"
   },
